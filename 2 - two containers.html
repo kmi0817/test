@@ -1,0 +1,40 @@
+<html>
+    <head>
+    <link rel="stylesheet" href="http://cdn.webix.com/edge/webix.css" type="text/css">
+    <!--
+    <script src="http://cdn.webix.com/edge/webix.js" type="text/javascript"></script>
+     -->
+    <script src="//cdn.webix.com/edge/webix.js" type="text/javascript"></script>
+    <style>
+      #layout, #layout2 {
+        display: inline-block;
+        height: 200px;
+        width: 300px;
+      }
+
+      #layout {
+        background-color: pink;
+      }
+      #layout2 {
+        background-color: yellow;
+      }
+    </style>
+    </head>
+    <body>
+    	<div id='layout'></div>
+      <div id='layout2'></div>
+        <script type="text/javascript" charset="utf-8">
+          webix.ready(function() {
+            webix.ui({
+              container: "layout2",
+  // container property points to the ID of the HTML element
+              height:200, width:300,
+              rows: [
+                {view: 'template', template: 'hello!'},
+                {view: 'template', template: 'good!!!'}
+              ]
+      		  });
+          });
+        </script>
+    </body>
+ </html>
